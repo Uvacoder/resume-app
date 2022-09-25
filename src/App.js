@@ -1,4 +1,5 @@
 import React from 'react';
+import { myNewTheme } from './Theme.js';
 import {FaLinkedin, FaGithub} from 'react-icons/fa';
 import {
   ChakraProvider,
@@ -20,8 +21,8 @@ import { emojisplosion, emojisplosions } from "emojisplosion";
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
+    <ChakraProvider resetCSS theme={myNewTheme}>
+      <Box textAlign="center" fontSize="xl" bg='primary'>
         <Grid minH="100vh" p={3}>
           {/* <ColorModeSwitcher justifySelf="flex-end" /> */}
           <VStack spacing={8}>
