@@ -1,4 +1,5 @@
 import React from 'react';
+import {FaLinkedin, FaGithub} from 'react-icons/fa';
 import {
   ChakraProvider,
   Box,
@@ -8,35 +9,58 @@ import {
   Code,
   Grid,
   theme,
+  Button,
+  ButtonGroup,
+  Image
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
+import { emojisplosion, emojisplosions } from "emojisplosion";
+
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
+          {/* <ColorModeSwitcher justifySelf="flex-end" /> */}
           <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
+            <Image
+              borderRadius='full'
+              boxSize='300px'
+              src='../assets/mikeportrait.jpeg'
+              alt='Mike Martin'
+              onMouseOver={emojisplosion({emojis: ["✨", "✨",  "✨", "✨", "✨", "✨", "✨", "✨", "✨", "✨"],})}
+            />
+            
             <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
+              Mike Martin
             </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+
+            
+
+            
+          
+            <ButtonGroup variant='outline' spacing='6'>
+              <Link href="https://www.linkedin.com/in/michael-martin-3231b512a/" target="_blank"><Button colorScheme='twitter' leftIcon={<FaLinkedin />}>LinkedIn</Button></Link>
+              <Link href="https://github.com/michaelmartin9937" target="_blank"><Button colorScheme='twitter' leftIcon={<FaGithub />}>GitHub</Button></Link>
+              <Link href="https://docs.google.com/document/d/1i7QTKKO_dwiCb2wy4U6LQvkwjF5kajaiatSnCAnnyl0/edit?usp=sharing" target="_blank"><Button colorScheme='blue'>Resume</Button></Link>
+            </ButtonGroup>
+
+            <hr></hr>
+
+            <Text>My Best Work</Text>
+            <Link href="https://broken-hall-1854.on.fleek.co/" target="_blank" color="#D25A59">Cryptocurrency Exchange</Link>
+
+            
+            
           </VStack>
         </Grid>
       </Box>
     </ChakraProvider>
+     
   );
+ 
 }
 
 export default App;
