@@ -22,7 +22,7 @@ import { emojisplosion, emojisplosions } from "emojisplosion";
 function App() {
   return (
     <ChakraProvider resetCSS theme={myNewTheme}>
-      <Box textAlign="center" fontSize="xl" bg='primary'>
+      <Box textAlign="center" fontSize="xl" bg='primary' textColor='white'>
         <Grid minH="100vh" p={3}>
           {/* <ColorModeSwitcher justifySelf="flex-end" /> */}
           <VStack spacing={8}>
