@@ -26,7 +26,7 @@ function App() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Mike Martin</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="canonical" href="mikemartin.xyz" />
         <meta name="description" content="My Resume Page" />
       </Helmet>
       <Box textAlign="center" fontSize="xl" bg='primary' textColor='white'>        
