@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 import { myNewTheme } from './Theme.js';
 import {FaLinkedin, FaGithub} from 'react-icons/fa';
 import {
@@ -22,7 +23,13 @@ import { emojisplosion, emojisplosions } from "emojisplosion";
 function App() {
   return (
     <ChakraProvider resetCSS theme={myNewTheme}>
-      <Box textAlign="center" fontSize="xl" bg='primary' textColor='white'>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Mike Martin</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        <meta name="description" content="My Resume Page" />
+      </Helmet>
+      <Box textAlign="center" fontSize="xl" bg='primary' textColor='white'>        
         <Grid minH="100vh" p={3}>
           {/* <ColorModeSwitcher justifySelf="flex-end" /> */}
           <VStack spacing={8}>
